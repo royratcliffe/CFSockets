@@ -6,14 +6,319 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		78D32108159056650039E12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D32107159056650039E12B /* Cocoa.framework */; };
+		78D32112159056650039E12B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D32110159056650039E12B /* InfoPlist.strings */; };
+		78D3211E159056650039E12B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3211D159056650039E12B /* SenTestingKit.framework */; };
+		78D3211F159056650039E12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D32107159056650039E12B /* Cocoa.framework */; };
+		78D32122159056650039E12B /* CFSockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D32104159056650039E12B /* CFSockets.framework */; };
+		78D32128159056650039E12B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D32126159056650039E12B /* InfoPlist.strings */; };
+		78D3212B159056650039E12B /* CFSocketsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3212A159056650039E12B /* CFSocketsTests.m */; };
+		78D321341590568F0039E12B /* CFSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D321321590568F0039E12B /* CFSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D321351590568F0039E12B /* CFSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D321331590568F0039E12B /* CFSocket.m */; };
+		78D3213C15905D570039E12B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3213B15905D570039E12B /* Foundation.framework */; };
+		78D3214915905D570039E12B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3211D159056650039E12B /* SenTestingKit.framework */; };
+		78D3214B15905D570039E12B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3214A15905D570039E12B /* UIKit.framework */; };
+		78D3214C15905D570039E12B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3213B15905D570039E12B /* Foundation.framework */; };
+		78D3214F15905D570039E12B /* libCFSockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3213A15905D570039E12B /* libCFSockets.a */; };
+		78D3215F15905E280039E12B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D32126159056650039E12B /* InfoPlist.strings */; };
+		78D3216015905E840039E12B /* CFSocketsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3212A159056650039E12B /* CFSocketsTests.m */; };
+		78D3216115905E970039E12B /* CFSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D321331590568F0039E12B /* CFSocket.m */; };
+		78D3216215905E9D0039E12B /* CFSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D321321590568F0039E12B /* CFSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D3216315905EA20039E12B /* CFSockets.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D32114159056650039E12B /* CFSockets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D3216415905EA30039E12B /* CFSockets.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D32114159056650039E12B /* CFSockets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D32180159061E10039E12B /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3217E159061E10039E12B /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D32181159061E10039E12B /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3217E159061E10039E12B /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D32182159061E10039E12B /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3217F159061E10039E12B /* Versioning.m */; };
+		78D32183159061E10039E12B /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3217F159061E10039E12B /* Versioning.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78D32120159056650039E12B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78D320F8159055A10039E12B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78D32103159056650039E12B;
+			remoteInfo = CFSockets;
+		};
+		78D3214D15905D570039E12B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78D320F8159055A10039E12B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78D3213915905D570039E12B;
+			remoteInfo = CFSocketsLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78D32104159056650039E12B /* CFSockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFSockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D32107159056650039E12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		78D3210A159056650039E12B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		78D3210B159056650039E12B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		78D3210C159056650039E12B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78D3210F159056650039E12B /* CFSockets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CFSockets-Info.plist"; sourceTree = "<group>"; };
+		78D32111159056650039E12B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78D32113159056650039E12B /* CFSockets-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CFSockets-Prefix.pch"; sourceTree = "<group>"; };
+		78D32114159056650039E12B /* CFSockets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSockets.h; sourceTree = "<group>"; };
+		78D3211C159056650039E12B /* CFSocketsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFSocketsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D3211D159056650039E12B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		78D32125159056650039E12B /* CFSocketsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CFSocketsTests-Info.plist"; sourceTree = "<group>"; };
+		78D32127159056650039E12B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78D32129159056650039E12B /* CFSocketsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSocketsTests.h; sourceTree = "<group>"; };
+		78D3212A159056650039E12B /* CFSocketsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFSocketsTests.m; sourceTree = "<group>"; };
+		78D321321590568F0039E12B /* CFSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSocket.h; sourceTree = "<group>"; };
+		78D321331590568F0039E12B /* CFSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSocket.m; sourceTree = "<group>"; };
+		78D3213A15905D570039E12B /* libCFSockets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCFSockets.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D3213B15905D570039E12B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78D3214815905D570039E12B /* CFSocketsLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFSocketsLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D3214A15905D570039E12B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		78D3217E159061E10039E12B /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
+		78D3217F159061E10039E12B /* Versioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78D32100159056650039E12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D32108159056650039E12B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D32118159056650039E12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3211E159056650039E12B /* SenTestingKit.framework in Frameworks */,
+				78D3211F159056650039E12B /* Cocoa.framework in Frameworks */,
+				78D32122159056650039E12B /* CFSockets.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3213715905D570039E12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3213C15905D570039E12B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3214415905D570039E12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3214915905D570039E12B /* SenTestingKit.framework in Frameworks */,
+				78D3214B15905D570039E12B /* UIKit.framework in Frameworks */,
+				78D3214C15905D570039E12B /* Foundation.framework in Frameworks */,
+				78D3214F15905D570039E12B /* libCFSockets.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		78D320F6159055A10039E12B = {
 			isa = PBXGroup;
 			children = (
+				78D3210D159056650039E12B /* CFSockets */,
+				78D32123159056650039E12B /* CFSocketsTests */,
+				78D32106159056650039E12B /* Frameworks */,
+				78D32105159056650039E12B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		78D32105159056650039E12B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78D32104159056650039E12B /* CFSockets.framework */,
+				78D3211C159056650039E12B /* CFSocketsTests.octest */,
+				78D3213A15905D570039E12B /* libCFSockets.a */,
+				78D3214815905D570039E12B /* CFSocketsLibTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78D32106159056650039E12B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78D32107159056650039E12B /* Cocoa.framework */,
+				78D3211D159056650039E12B /* SenTestingKit.framework */,
+				78D3213B15905D570039E12B /* Foundation.framework */,
+				78D3214A15905D570039E12B /* UIKit.framework */,
+				78D32109159056650039E12B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78D32109159056650039E12B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78D3210A159056650039E12B /* AppKit.framework */,
+				78D3210B159056650039E12B /* CoreData.framework */,
+				78D3210C159056650039E12B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		78D3210D159056650039E12B /* CFSockets */ = {
+			isa = PBXGroup;
+			children = (
+				78D32114159056650039E12B /* CFSockets.h */,
+				78D321321590568F0039E12B /* CFSocket.h */,
+				78D321331590568F0039E12B /* CFSocket.m */,
+				78D3217E159061E10039E12B /* Versioning.h */,
+				78D3217F159061E10039E12B /* Versioning.m */,
+				78D3210E159056650039E12B /* Supporting Files */,
+			);
+			path = CFSockets;
+			sourceTree = "<group>";
+		};
+		78D3210E159056650039E12B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78D3210F159056650039E12B /* CFSockets-Info.plist */,
+				78D32110159056650039E12B /* InfoPlist.strings */,
+				78D32113159056650039E12B /* CFSockets-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78D32123159056650039E12B /* CFSocketsTests */ = {
+			isa = PBXGroup;
+			children = (
+				78D32129159056650039E12B /* CFSocketsTests.h */,
+				78D3212A159056650039E12B /* CFSocketsTests.m */,
+				78D32124159056650039E12B /* Supporting Files */,
+			);
+			path = CFSocketsTests;
+			sourceTree = "<group>";
+		};
+		78D32124159056650039E12B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78D32125159056650039E12B /* CFSocketsTests-Info.plist */,
+				78D32126159056650039E12B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		78D32101159056650039E12B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D321341590568F0039E12B /* CFSocket.h in Headers */,
+				78D3216315905EA20039E12B /* CFSockets.h in Headers */,
+				78D32180159061E10039E12B /* Versioning.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3213815905D570039E12B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3216215905E9D0039E12B /* CFSocket.h in Headers */,
+				78D3216415905EA30039E12B /* CFSockets.h in Headers */,
+				78D32181159061E10039E12B /* Versioning.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		78D3216515905F240039E12B /* CFSocketsPages */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c \"$HOME/.rvm/bin/rvm-auto-ruby -r XcodePages -e XcodePages.doxygen_docset_install\"";
+			buildConfigurationList = 78D3216615905F240039E12B /* Build configuration list for PBXLegacyTarget "CFSocketsPages" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = CFSocketsPages;
+			passBuildSettingsInEnvironment = 1;
+			productName = CFSocketsPages;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		78D32103159056650039E12B /* CFSockets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D3212C159056650039E12B /* Build configuration list for PBXNativeTarget "CFSockets" */;
+			buildPhases = (
+				78D320FF159056650039E12B /* Sources */,
+				78D32100159056650039E12B /* Frameworks */,
+				78D32101159056650039E12B /* Headers */,
+				78D32102159056650039E12B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CFSockets;
+			productName = CFSockets;
+			productReference = 78D32104159056650039E12B /* CFSockets.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		78D3211B159056650039E12B /* CFSocketsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D3212F159056650039E12B /* Build configuration list for PBXNativeTarget "CFSocketsTests" */;
+			buildPhases = (
+				78D32117159056650039E12B /* Sources */,
+				78D32118159056650039E12B /* Frameworks */,
+				78D32119159056650039E12B /* Resources */,
+				78D3211A159056650039E12B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78D32121159056650039E12B /* PBXTargetDependency */,
+			);
+			name = CFSocketsTests;
+			productName = CFSocketsTests;
+			productReference = 78D3211C159056650039E12B /* CFSocketsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		78D3213915905D570039E12B /* CFSocketsLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D3215915905D570039E12B /* Build configuration list for PBXNativeTarget "CFSocketsLib" */;
+			buildPhases = (
+				78D3213615905D570039E12B /* Sources */,
+				78D3213715905D570039E12B /* Frameworks */,
+				78D3213815905D570039E12B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CFSocketsLib;
+			productName = CFSocketsLib;
+			productReference = 78D3213A15905D570039E12B /* libCFSockets.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		78D3214715905D570039E12B /* CFSocketsLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D3215C15905D570039E12B /* Build configuration list for PBXNativeTarget "CFSocketsLibTests" */;
+			buildPhases = (
+				78D3214315905D570039E12B /* Sources */,
+				78D3214415905D570039E12B /* Frameworks */,
+				78D3214515905D570039E12B /* Resources */,
+				78D3214615905D570039E12B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78D3214E15905D570039E12B /* PBXTargetDependency */,
+			);
+			name = CFSocketsLibTests;
+			productName = CFSocketsLibTests;
+			productReference = 78D3214815905D570039E12B /* CFSocketsLibTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		78D320F8159055A10039E12B /* Project object */ = {
@@ -30,23 +335,453 @@
 				en,
 			);
 			mainGroup = 78D320F6159055A10039E12B;
+			productRefGroup = 78D32105159056650039E12B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				78D32103159056650039E12B /* CFSockets */,
+				78D3211B159056650039E12B /* CFSocketsTests */,
+				78D3213915905D570039E12B /* CFSocketsLib */,
+				78D3214715905D570039E12B /* CFSocketsLibTests */,
+				78D3216515905F240039E12B /* CFSocketsPages */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78D32102159056650039E12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D32112159056650039E12B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D32119159056650039E12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D32128159056650039E12B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3214515905D570039E12B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3215F15905E280039E12B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78D3211A159056650039E12B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		78D3214615905D570039E12B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78D320FF159056650039E12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D321351590568F0039E12B /* CFSocket.m in Sources */,
+				78D32182159061E10039E12B /* Versioning.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D32117159056650039E12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3212B159056650039E12B /* CFSocketsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3213615905D570039E12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3216115905E970039E12B /* CFSocket.m in Sources */,
+				78D32183159061E10039E12B /* Versioning.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D3214315905D570039E12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D3216015905E840039E12B /* CFSocketsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78D32121159056650039E12B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78D32103159056650039E12B /* CFSockets */;
+			targetProxy = 78D32120159056650039E12B /* PBXContainerItemProxy */;
+		};
+		78D3214E15905D570039E12B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78D3213915905D570039E12B /* CFSocketsLib */;
+			targetProxy = 78D3214D15905D570039E12B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78D32110159056650039E12B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78D32111159056650039E12B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78D32126159056650039E12B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78D32127159056650039E12B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		78D320FD159055A10039E12B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
 			};
 			name = Debug;
 		};
 		78D320FE159055A10039E12B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
+			};
+			name = Release;
+		};
+		78D3212D159056650039E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.0;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSockets/CFSockets-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		78D3212E159056650039E12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1.0;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSockets/CFSockets-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		78D32130159056650039E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSocketsTests/CFSocketsTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		78D32131159056650039E12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSocketsTests/CFSocketsTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		78D3215A15905D570039E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/CFSocketsLib.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		78D3215B15905D570039E12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/CFSocketsLib.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78D3215D15905D570039E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSocketsTests/CFSocketsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		78D3215E15905D570039E12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CFSockets/CFSockets-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "CFSocketsTests/CFSocketsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		78D3216715905F240039E12B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PATH = "/bin:/usr/bin:/usr/local/bin:/Applications/Doxygen.app/Contents/Resources";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		78D3216815905F240039E12B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PATH = "/bin:/usr/bin:/usr/local/bin:/Applications/Doxygen.app/Contents/Resources";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -58,6 +793,51 @@
 			buildConfigurations = (
 				78D320FD159055A10039E12B /* Debug */,
 				78D320FE159055A10039E12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D3212C159056650039E12B /* Build configuration list for PBXNativeTarget "CFSockets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D3212D159056650039E12B /* Debug */,
+				78D3212E159056650039E12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D3212F159056650039E12B /* Build configuration list for PBXNativeTarget "CFSocketsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D32130159056650039E12B /* Debug */,
+				78D32131159056650039E12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D3215915905D570039E12B /* Build configuration list for PBXNativeTarget "CFSocketsLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D3215A15905D570039E12B /* Debug */,
+				78D3215B15905D570039E12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D3215C15905D570039E12B /* Build configuration list for PBXNativeTarget "CFSocketsLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D3215D15905D570039E12B /* Debug */,
+				78D3215E15905D570039E12B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78D3216615905F240039E12B /* Build configuration list for PBXLegacyTarget "CFSocketsPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D3216715905F240039E12B /* Debug */,
+				78D3216815905F240039E12B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

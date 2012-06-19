@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'CFSockets' target in the 'CFSockets' project
+// Prefix header for all source files of the 'CFSocketsLib' target in the 'CFSocketsLib' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
