@@ -58,8 +58,8 @@
 - (NSData *)receiveAvailableBytes;
 
 /*!
- * @brief Special convenience method for reading lines of text from the request
- * stream based on a given string encoding.
+ * @brief Special convenience method for receiving lines of text from the
+ * request stream based on a given string encoding.
  * @details The result includes any line termination characters. There could be
  * more than one termination character at the end of the line since some line
  * termination sequences span multiple characters.
