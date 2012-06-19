@@ -24,4 +24,5 @@
 
 #import <CFSockets/CFSocket.h>
 #import <CFSockets/CFSocketAddressDataHelpers.h>
+#import <CFSockets/CFStreamPair.h>
 #import <CFSockets/Versioning.h>
