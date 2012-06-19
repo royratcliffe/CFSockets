@@ -31,6 +31,14 @@
 		78D32181159061E10039E12B /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3217E159061E10039E12B /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78D32182159061E10039E12B /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3217F159061E10039E12B /* Versioning.m */; };
 		78D32183159061E10039E12B /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3217F159061E10039E12B /* Versioning.m */; };
+		78D3218D159067550039E12B /* CFStreamPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3218B159067550039E12B /* CFStreamPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D3218E159067550039E12B /* CFStreamPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3218B159067550039E12B /* CFStreamPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D3218F159067550039E12B /* CFStreamPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3218C159067550039E12B /* CFStreamPair.m */; };
+		78D32190159067550039E12B /* CFStreamPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3218C159067550039E12B /* CFStreamPair.m */; };
+		78D321A0159090FE0039E12B /* CFSocketAddressDataHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3219E159090FE0039E12B /* CFSocketAddressDataHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D321A1159090FE0039E12B /* CFSocketAddressDataHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3219E159090FE0039E12B /* CFSocketAddressDataHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D321A2159090FE0039E12B /* CFSocketAddressDataHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3219F159090FE0039E12B /* CFSocketAddressDataHelpers.m */; };
+		78D321A3159090FE0039E12B /* CFSocketAddressDataHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D3219F159090FE0039E12B /* CFSocketAddressDataHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,10 @@
 		78D3214A15905D570039E12B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		78D3217E159061E10039E12B /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
 		78D3217F159061E10039E12B /* Versioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
+		78D3218B159067550039E12B /* CFStreamPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFStreamPair.h; sourceTree = "<group>"; };
+		78D3218C159067550039E12B /* CFStreamPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFStreamPair.m; sourceTree = "<group>"; };
+		78D3219E159090FE0039E12B /* CFSocketAddressDataHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFSocketAddressDataHelpers.h; sourceTree = "<group>"; };
+		78D3219F159090FE0039E12B /* CFSocketAddressDataHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFSocketAddressDataHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,10 @@
 				78D32114159056650039E12B /* CFSockets.h */,
 				78D321321590568F0039E12B /* CFSocket.h */,
 				78D321331590568F0039E12B /* CFSocket.m */,
+				78D3219E159090FE0039E12B /* CFSocketAddressDataHelpers.h */,
+				78D3219F159090FE0039E12B /* CFSocketAddressDataHelpers.m */,
+				78D3218B159067550039E12B /* CFStreamPair.h */,
+				78D3218C159067550039E12B /* CFStreamPair.m */,
 				78D3217E159061E10039E12B /* Versioning.h */,
 				78D3217F159061E10039E12B /* Versioning.m */,
 				78D3210E159056650039E12B /* Supporting Files */,
@@ -212,6 +228,8 @@
 				78D321341590568F0039E12B /* CFSocket.h in Headers */,
 				78D3216315905EA20039E12B /* CFSockets.h in Headers */,
 				78D32180159061E10039E12B /* Versioning.h in Headers */,
+				78D3218D159067550039E12B /* CFStreamPair.h in Headers */,
+				78D321A0159090FE0039E12B /* CFSocketAddressDataHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +240,8 @@
 				78D3216215905E9D0039E12B /* CFSocket.h in Headers */,
 				78D3216415905EA30039E12B /* CFSockets.h in Headers */,
 				78D32181159061E10039E12B /* Versioning.h in Headers */,
+				78D3218E159067550039E12B /* CFStreamPair.h in Headers */,
+				78D321A1159090FE0039E12B /* CFSocketAddressDataHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +431,8 @@
 			files = (
 				78D321351590568F0039E12B /* CFSocket.m in Sources */,
 				78D32182159061E10039E12B /* Versioning.m in Sources */,
+				78D3218F159067550039E12B /* CFStreamPair.m in Sources */,
+				78D321A2159090FE0039E12B /* CFSocketAddressDataHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +450,8 @@
 			files = (
 				78D3216115905E970039E12B /* CFSocket.m in Sources */,
 				78D32183159061E10039E12B /* Versioning.m in Sources */,
+				78D32190159067550039E12B /* CFStreamPair.m in Sources */,
+				78D321A3159090FE0039E12B /* CFSocketAddressDataHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
