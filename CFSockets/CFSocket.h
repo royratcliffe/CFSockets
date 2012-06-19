@@ -36,6 +36,15 @@
 @end
 
 /*!
+ * @brief Wraps Core Foundation's sockets in Objective-C clothing.
+ * @details Handles ARC memory management issues for a socket and implements a
+ * delegation protocol. As an object, you can sub-class the socket. It papers
+ * over the toll-free bridging requirements necessary for interactions between
+ * Core Foundation and Foundation. Start by initialising a socket, either an
+ * explicit IPv6 or IPv4 TCP socket, or whichever version of TCP socket the
+ * system makes available to you. Note that IPv4 clients can also access IPv6
+ * sockets.
+ *
  * Note, you can have an object class called CFSocket; it does not clash with
  * Apple's Core Foundation C-based socket functions, externals and constants
  * because those exist in the C name space, while CFSocket here exists in the

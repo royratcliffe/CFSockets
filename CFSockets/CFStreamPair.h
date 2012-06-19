@@ -36,6 +36,13 @@
 
 @end
 
+/*!
+ * @brief Adds request-response semantics to a socket by encapsulating it with
+ * an input-output stream pair.
+ * @details For TCP connections, the request input stream corresponds to the
+ * request; @em receive the request bytes from the request input, @em send the
+ * response to the response output stream.
+ */
 @interface CFStreamPair : NSObject<NSStreamDelegate>
 
 @property(weak, NS_NONATOMIC_IOSONLY) id<CFStreamPairDelegate> delegate;
