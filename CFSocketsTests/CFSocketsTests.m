@@ -44,4 +44,23 @@
 	}
 }
 
+- (void)testSocketBindingToAnyAddressWithPort54321
+{
+	NSError *__autoreleasing error = nil;
+	
+	CFSocket *socket = [[CFSocket alloc] initForTCPv6];
+	STAssertNotNil(socket, nil);
+	
+	// Clean up afterwards. Let the operating system quickly reclaim the port
+	// after shutting down the socket.
+	STAssertTrue([socket setReuseAddressOption:YES], nil);
+	
+	// Place a breakpoint after the following assert; with the unit test bundle
+	// paused by the debugger, switch to Terminal and run "lsof -i" then you
+	// will see an "otest" process with "TCP *:54321 (LISTEN)" meaning listening
+	// on port 54321.
+	STAssertTrue([socket setAddress:CFSocketAddressDataFromAnyIPv6WithPort(54321) error:&error], nil);
+	STAssertNil(error, nil);
+}
+
 @end
