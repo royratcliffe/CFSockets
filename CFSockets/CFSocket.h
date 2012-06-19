@@ -25,11 +25,13 @@
 #import <Foundation/Foundation.h>
 
 @class CFSocket;
+@class CFStreamPair;
 
 @protocol CFSocketDelegate<NSObject>
 @optional
 
 - (void)socket:(CFSocket *)socket acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
+- (void)socket:(CFSocket *)socket acceptStreamPair:(CFStreamPair *)streamPair;
 
 @end
 

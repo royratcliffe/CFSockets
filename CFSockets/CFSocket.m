@@ -23,6 +23,7 @@
 //------------------------------------------------------------------------------
 
 #import "CFSocket.h"
+#import "CFStreamPair.h"
 
 // for setsockopt(2)
 #import <sys/socket.h>
@@ -180,9 +181,28 @@
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	id<CFSocketDelegate> delegate = [self delegate];
-	if (delegate && [delegate respondsToSelector:@selector(socket:acceptNativeHandle:)])
+	if (delegate)
 	{
-		[delegate socket:self acceptNativeHandle:nativeHandle];
+		if ([delegate respondsToSelector:@selector(socket:acceptNativeHandle:)])
+		{
+			[delegate socket:self acceptNativeHandle:nativeHandle];
+		}
+		else if ([delegate respondsToSelector:@selector(socket:acceptStreamPair:)])
+		{
+			CFStreamPair *streamPair = [[CFStreamPair alloc] initWithSocketNativeHandle:nativeHandle];
+			if (streamPair)
+			{
+				[delegate socket:self acceptStreamPair:streamPair];
+			}
+		}
+		else
+		{
+			close(nativeHandle);
+		}
+	}
+	else
+	{
+		close(nativeHandle);
 	}
 }
 
