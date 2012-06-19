@@ -24,6 +24,9 @@
 
 #import "CFSocket.h"
 
+// for setsockopt(2)
+#import <sys/socket.h>
+
 @implementation CFSocket
 
 @synthesize delegate = _delegate;
@@ -53,13 +56,13 @@
 - (id)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol
 {
 	CFSocketContext context = { .info = (__bridge void *)self };
-	return [self initWithSocketRef:CFSocketCreate(kCFAllocatorDefault, family, type, protocol, kCFSocketNoCallBack, __CFSocketCallOut, &context)];
+	return [self initWithSocketRef:CFSocketCreate(kCFAllocatorDefault, family, type, protocol, kCFSocketAcceptCallBack, __CFSocketCallOut, &context)];
 }
 
 - (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	CFSocketContext context = { .info = (__bridge void *)self };
-	return [self initWithSocketRef:CFSocketCreateWithNative(kCFAllocatorDefault, nativeHandle, kCFSocketNoCallBack, __CFSocketCallOut, &context)];
+	return [self initWithSocketRef:CFSocketCreateWithNative(kCFAllocatorDefault, nativeHandle, kCFSocketAcceptCallBack, __CFSocketCallOut, &context)];
 }
 
 - (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError
@@ -116,6 +119,12 @@
 	return CFSocketGetNative(_socket);
 }
 
+- (BOOL)setReuseAddressOption:(BOOL)flag
+{
+	int option = (flag == NO) ? 0 : 1;
+	return 0 == setsockopt([self nativeHandle], SOL_SOCKET, SO_REUSEADDR, (void *)&option, sizeof(option));
+}
+
 - (void)addToCurrentRunLoopForCommonModes
 {
 	// NSRunLoop is not toll-free bridged to CFRunLoop, even though their names
@@ -135,6 +144,17 @@
 		CFRelease(_runLoopSource);
 		_runLoopSource = NULL;
 	}
+}
+
+- (void)disableAcceptCallBack
+{
+	CFSocketDisableCallBacks(_socket, kCFSocketAcceptCallBack);
+}
+
+- (void)enableAcceptCallBack
+{
+	// The Read, Accept and Data callbacks are mutually exclusive.
+	CFSocketEnableCallBacks(_socket, kCFSocketAcceptCallBack);
 }
 
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle

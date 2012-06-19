@@ -86,8 +86,11 @@
 - (NSData *)address;
 - (NSData *)peerAddress;
 - (NSSocketNativeHandle)nativeHandle;
+- (BOOL)setReuseAddressOption:(BOOL)flag;
 - (void)addToCurrentRunLoopForCommonModes;
 - (void)removeFromCurrentRunLoopForCommonModes;
+- (void)disableAcceptCallBack;
+- (void)enableAcceptCallBack;
 
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
