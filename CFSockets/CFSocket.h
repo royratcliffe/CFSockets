@@ -24,6 +24,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class CFSocket;
+
+@protocol CFSocketDelegate<NSObject>
+@optional
+
+- (void)socket:(CFSocket *)socket acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
+
+@end
+
 /*!
  * Note, you can have an object class called CFSocket; it does not clash with
  * Apple's Core Foundation C-based socket functions, externals and constants
@@ -31,5 +40,35 @@
  * Objective-C name space. They do not collide.
  */
 @interface CFSocket : NSObject
+{
+	CFSocketRef _socket;
+}
+
+@property(weak, NS_NONATOMIC_IOSONLY) id<CFSocketDelegate> delegate;
+
+/*!
+ * Initialisers also create the underlying Core Foundation socket. You cannot
+ * have a partially initialised Objective-C socket. When socket creation fails,
+ * initialisation fails also. All socket initialisers follow this
+ * pattern. Hence, you cannot initialise a socket with a NULL socket
+ * reference. In such cases, the initialiser answers @c nil.
+ *
+ * This approach creates a slight quandary. Creating a Core Foundation socket
+ * requires a socket context. The context needs to retain a bridging reference
+ * to @c self, the Objective-C object encapsulating the socket. Otherwise, the
+ * socket call-back function cannot springboard from C to Objective-C when
+ * call-backs trigger. When the initialiser returns successfully however, the
+ * answer overwrites @c self. What if @c self changes? If it changes to @c nil,
+ * no problem. But what if it changes to some other pointer address?
+ */
+- (id)initWithSocketRef:(CFSocketRef)socket;
+- (id)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol;
+- (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle;
+
+- (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
 @end
+
+extern NSString *const CFSocketErrorDomain;
+
+void __CFSocketCallOut(CFSocketRef socket, CFSocketCallBackType type, CFDataRef address, const void *data, void *info);

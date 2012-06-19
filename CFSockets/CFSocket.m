@@ -26,4 +26,68 @@
 
 @implementation CFSocket
 
+@synthesize delegate = _delegate;
+
+- (id)initWithSocketRef:(CFSocketRef)socket
+{
+	if ((self = [self init]))
+	{
+		if (socket)
+		{
+			_socket = socket;
+		}
+		else
+		{
+			self = nil;
+		}
+	}
+	return self;
+}
+
+- (id)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol
+{
+	CFSocketContext context = { .info = (__bridge void *)self };
+	return [self initWithSocketRef:CFSocketCreate(kCFAllocatorDefault, family, type, protocol, kCFSocketNoCallBack, __CFSocketCallOut, &context)];
+}
+
+- (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle
+{
+	CFSocketContext context = { .info = (__bridge void *)self };
+	return [self initWithSocketRef:CFSocketCreateWithNative(kCFAllocatorDefault, nativeHandle, kCFSocketNoCallBack, __CFSocketCallOut, &context)];
+}
+
+- (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
+{
+	id<CFSocketDelegate> delegate = [self delegate];
+	if (delegate && [delegate respondsToSelector:@selector(socket:acceptNativeHandle:)])
+	{
+		[delegate socket:self acceptNativeHandle:nativeHandle];
+	}
+}
+
+- (void)dealloc
+{
+	if (_socket)
+	{
+		CFRelease(_socket);
+		_socket = NULL;
+	}
+}
+
 @end
+
+NSString *const CFSocketErrorDomain = @"CFSocketErrorDomain";
+
+void __CFSocketCallOut(CFSocketRef socket, CFSocketCallBackType type, CFDataRef address, const void *data, void *info)
+{
+	switch (type)
+	{
+		case kCFSocketAcceptCallBack:
+		{
+			[(__bridge CFSocket *)info acceptNativeHandle:*(CFSocketNativeHandle *)data];
+			break;
+		}
+		default:
+			;
+	}
+}
