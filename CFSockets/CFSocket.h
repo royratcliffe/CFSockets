@@ -42,6 +42,7 @@
 @interface CFSocket : NSObject
 {
 	CFSocketRef _socket;
+	CFRunLoopSourceRef _runLoopSource;
 }
 
 @property(weak, NS_NONATOMIC_IOSONLY) id<CFSocketDelegate> delegate;
@@ -85,6 +86,8 @@
 - (NSData *)address;
 - (NSData *)peerAddress;
 - (NSSocketNativeHandle)nativeHandle;
+- (void)addToCurrentRunLoopForCommonModes;
+- (void)removeFromCurrentRunLoopForCommonModes;
 
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 

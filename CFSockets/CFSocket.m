@@ -116,6 +116,27 @@
 	return CFSocketGetNative(_socket);
 }
 
+- (void)addToCurrentRunLoopForCommonModes
+{
+	// NSRunLoop is not toll-free bridged to CFRunLoop, even though their names
+	// might suggest that they are.
+	if (_runLoopSource == NULL)
+	{
+		_runLoopSource = CFSocketCreateRunLoopSource(kCFAllocatorDefault, _socket, 0);
+		CFRunLoopAddSource(CFRunLoopGetCurrent(), _runLoopSource, kCFRunLoopCommonModes);
+	}
+}
+
+- (void)removeFromCurrentRunLoopForCommonModes
+{
+	if (_runLoopSource)
+	{
+		CFRunLoopRemoveSource(CFRunLoopGetCurrent(), _runLoopSource, kCFRunLoopCommonModes);
+		CFRelease(_runLoopSource);
+		_runLoopSource = NULL;
+	}
+}
+
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	id<CFSocketDelegate> delegate = [self delegate];
@@ -132,6 +153,7 @@
 	// a failed initialisation sequence does not invoke the
 	// de-allocator. However, you cannot assume that. Assigning self to nil
 	// under ARC de-allocates the instance and invokes the -dealloc method.
+	[self removeFromCurrentRunLoopForCommonModes];
 	if (_socket)
 	{
 		CFRelease(_socket);
