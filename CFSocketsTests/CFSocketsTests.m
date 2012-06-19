@@ -36,4 +36,12 @@
 	STAssertNotNil(CFSocketsVersionString(), nil);
 }
 
+- (void)testDefaultSocketInitialiser
+{
+	@autoreleasepool {
+		CFSocket *socket = [[CFSocket alloc] init];
+		STAssertNil(socket, nil);
+	}
+}
+
 @end

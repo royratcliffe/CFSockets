@@ -28,6 +28,11 @@
 
 @synthesize delegate = _delegate;
 
+- (id)init
+{
+	return (self = nil);
+}
+
 // designated initialiser
 - (id)initWithSocketRef:(CFSocketRef)socket
 {
@@ -71,6 +76,20 @@
 	return success;
 }
 
+- (BOOL)connectToAddress:(NSData *)addressData timeout:(NSTimeInterval)timeout error:(NSError **)outError
+{
+	CFSocketError error = CFSocketConnectToAddress(_socket, (__bridge CFDataRef)addressData, timeout);
+	BOOL success = (error == kCFSocketSuccess);
+	if (!success)
+	{
+		if (outError && *outError == nil)
+		{
+			*outError = [NSError errorWithDomain:CFSocketErrorDomain code:error userInfo:nil];
+		}
+	}
+	return success;
+}
+
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	id<CFSocketDelegate> delegate = [self delegate];
@@ -84,9 +103,14 @@
 {
 	// The de-allocator does not need to wonder if the underlying socket exists,
 	// or not. By contract, the socket must exist. This assumes, of course, that
-	// a failed initialisation sequence does not invoke the de-allocator.
-	CFRelease(_socket);
-	_socket = NULL;
+	// a failed initialisation sequence does not invoke the
+	// de-allocator. However, you cannot assume that. Assigning self to nil
+	// under ARC de-allocates the instance and invokes the -dealloc method.
+	if (_socket)
+	{
+		CFRelease(_socket);
+		_socket = NULL;
+	}
 }
 
 @end

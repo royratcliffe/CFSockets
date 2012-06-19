@@ -78,6 +78,7 @@
  * the address; that is, before using the getter method.
  */
 - (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError;
+- (BOOL)connectToAddress:(NSData *)addressData timeout:(NSTimeInterval)timeout error:(NSError **)outError;
 
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
