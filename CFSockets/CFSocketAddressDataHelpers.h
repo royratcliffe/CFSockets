@@ -1,4 +1,4 @@
-/* CFSockets CFSockets.h
+/* CFSockets CFSocketAddressDataHelpers.h
  *
  * Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
  *
@@ -22,6 +22,14 @@
  *
  ******************************************************************************/
 
-#import <CFSockets/CFSocket.h>
-#import <CFSockets/CFSocketAddressDataHelpers.h>
-#import <CFSockets/Versioning.h>
+#import <Foundation/Foundation.h>
+
+#import <netinet/in.h>
+
+NSData *CFSocketAddressDataFromIPv6AddressWithPort(const struct in6_addr *addr, in_port_t port);
+NSData *CFSocketAddressDataFromAnyIPv6WithPort(in_port_t port);
+NSData *CFSocketAddressDataFromLoopBackIPv6WithPort(in_port_t port);
+
+NSData *CFSocketAddressDataFromIPv4AddressWithPort(in_addr_t addr, in_port_t port);
+NSData *CFSocketAddressDataFromAnyIPv4WithPort(in_port_t port);
+NSData *CFSocketAddressDataFromLoopBackIPv4WithPort(in_port_t port);
