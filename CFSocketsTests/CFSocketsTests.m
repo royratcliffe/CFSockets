@@ -63,4 +63,18 @@
 	STAssertNil(error, nil);
 }
 
+- (void)testSocketBindingToLoopBackAddressWithPort54321
+{
+	NSError *__autoreleasing error = nil;
+	
+	CFSocket *socket = [[CFSocket alloc] initForTCPv6];
+	STAssertNotNil(socket, nil);
+	
+	STAssertTrue([socket setReuseAddressOption:YES], nil);
+	
+	// TCP localhost:54321 (LISTEN)
+	STAssertTrue([socket setAddress:CFSocketAddressDataFromLoopBackIPv6WithPort(54321) error:&error], nil);
+	STAssertNil(error, nil);
+}
+
 @end
