@@ -27,6 +27,9 @@
 // for setsockopt(2)
 #import <sys/socket.h>
 
+// for IPPROTO_TCP
+#import <netinet/in.h>
+
 @implementation CFSocket
 
 @synthesize delegate = _delegate;
@@ -57,6 +60,23 @@
 {
 	CFSocketContext context = { .info = (__bridge void *)self };
 	return [self initWithSocketRef:CFSocketCreate(kCFAllocatorDefault, family, type, protocol, kCFSocketAcceptCallBack, __CFSocketCallOut, &context)];
+}
+
+- (id)initForTCPv6
+{
+	return [self initWithProtocolFamily:PF_INET6 socketType:SOCK_STREAM protocol:IPPROTO_TCP];
+}
+
+- (id)initForTCPv4
+{
+	return [self initWithProtocolFamily:PF_INET socketType:SOCK_STREAM protocol:IPPROTO_TCP];
+}
+
+- (id)initForTCP
+{
+	self = [self initForTCPv6];
+	if (self == nil) self = [self initForTCPv4];
+	return self;
 }
 
 - (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle

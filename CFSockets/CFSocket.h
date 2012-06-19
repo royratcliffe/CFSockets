@@ -66,7 +66,22 @@
  * @todo Add more initialisers; specifically, socket signature initialisers.
  */
 - (id)initWithSocketRef:(CFSocketRef)socket;
+
 - (id)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol;
+- (id)initForTCPv6;
+- (id)initForTCPv4;
+
+/*!
+ * @brief Instantiates and creates a TCP socket using Internet Protocol version
+ * 6 if available, else tries version 4.
+ * @result Answers a TCP socket, version 6 or 4; returns @c nil if the socket
+ * fails to create.
+ * @details Starts by creating a socket for Internet Protocol version 6. This
+ * also supports IPv4 clients via IPv4-mapped IPv6 addresses. Falls back to IPv4
+ * only when IPv6 fails.
+ */
+- (id)initForTCP;
+
 - (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
 /*!
@@ -79,6 +94,7 @@
  * the address; that is, before using the getter method.
  */
 - (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError;
+
 - (BOOL)connectToAddress:(NSData *)addressData timeout:(NSTimeInterval)timeout error:(NSError **)outError;
 
 - (void)invalidate;
