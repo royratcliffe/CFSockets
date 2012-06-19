@@ -28,9 +28,10 @@
 
 @synthesize delegate = _delegate;
 
+// designated initialiser
 - (id)initWithSocketRef:(CFSocketRef)socket
 {
-	if ((self = [self init]))
+	if ((self = [super init]))
 	{
 		if (socket)
 		{
@@ -56,6 +57,20 @@
 	return [self initWithSocketRef:CFSocketCreateWithNative(kCFAllocatorDefault, nativeHandle, kCFSocketNoCallBack, __CFSocketCallOut, &context)];
 }
 
+- (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError
+{
+	CFSocketError error = CFSocketSetAddress(_socket, (__bridge CFDataRef)addressData);
+	BOOL success = (error == kCFSocketSuccess);
+	if (!success)
+	{
+		if (outError && *outError == nil)
+		{
+			*outError = [NSError errorWithDomain:CFSocketErrorDomain code:error userInfo:nil];
+		}
+	}
+	return success;
+}
+
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	id<CFSocketDelegate> delegate = [self delegate];
@@ -67,11 +82,11 @@
 
 - (void)dealloc
 {
-	if (_socket)
-	{
-		CFRelease(_socket);
-		_socket = NULL;
-	}
+	// The de-allocator does not need to wonder if the underlying socket exists,
+	// or not. By contract, the socket must exist. This assumes, of course, that
+	// a failed initialisation sequence does not invoke the de-allocator.
+	CFRelease(_socket);
+	_socket = NULL;
 }
 
 @end
@@ -84,6 +99,12 @@ void __CFSocketCallOut(CFSocketRef socket, CFSocketCallBackType type, CFDataRef 
 	{
 		case kCFSocketAcceptCallBack:
 		{
+			// Next Step meets Core Foundation socket native handle type in the
+			// next statement. You can use them interchangeably. Apple
+			// type-define both as int. They are really Unix socket
+			// descriptors. The external interface uses the Next Step
+			// definition, since the Next Step foundation framework is the most
+			// immediate dependency.
 			[(__bridge CFSocket *)info acceptNativeHandle:*(CFSocketNativeHandle *)data];
 			break;
 		}

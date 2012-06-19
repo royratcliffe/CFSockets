@@ -47,9 +47,10 @@
 @property(weak, NS_NONATOMIC_IOSONLY) id<CFSocketDelegate> delegate;
 
 /*!
- * Initialisers also create the underlying Core Foundation socket. You cannot
- * have a partially initialised Objective-C socket. When socket creation fails,
- * initialisation fails also. All socket initialisers follow this
+ * @brief Designated initialiser.
+ * @details Initialisers also create the underlying Core Foundation socket. You
+ * cannot have a partially initialised Objective-C socket. When socket creation
+ * fails, initialisation fails also. All socket initialisers follow this
  * pattern. Hence, you cannot initialise a socket with a NULL socket
  * reference. In such cases, the initialiser answers @c nil.
  *
@@ -60,10 +61,23 @@
  * call-backs trigger. When the initialiser returns successfully however, the
  * answer overwrites @c self. What if @c self changes? If it changes to @c nil,
  * no problem. But what if it changes to some other pointer address?
+ *
+ * @todo Add more initialisers; specifically, socket signature initialisers.
  */
 - (id)initWithSocketRef:(CFSocketRef)socket;
 - (id)initWithProtocolFamily:(int)family socketType:(int)type protocol:(int)protocol;
 - (id)initWithNativeHandle:(NSSocketNativeHandle)nativeHandle;
+
+/*!
+ * @brief Binds an address to a socket.
+ * @details Despite the innocuous-sounding method name, this method irreversibly
+ * binds the socket; assuming success. Do this early when constructing a
+ * socket. Be aware that accessing the address also binds the socket, if not
+ * already bound. You cannot therefore subsequently bind it. If you want to bind
+ * to a specific port, do so by setting the socket address @em before asking for
+ * the address; that is, before using the getter method.
+ */
+- (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError;
 
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
