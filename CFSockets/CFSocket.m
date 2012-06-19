@@ -90,6 +90,32 @@
 	return success;
 }
 
+- (void)invalidate
+{
+	// Never close the underlying native socket without first invalidating.
+	CFSocketInvalidate(_socket);
+}
+
+- (BOOL)isValid
+{
+	return CFSocketIsValid(_socket) != false;
+}
+
+- (NSData *)address
+{
+	return CFBridgingRelease(CFSocketCopyAddress(_socket));
+}
+
+- (NSData *)peerAddress
+{
+	return CFBridgingRelease(CFSocketCopyPeerAddress(_socket));
+}
+
+- (NSSocketNativeHandle)nativeHandle
+{
+	return CFSocketGetNative(_socket);
+}
+
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle
 {
 	id<CFSocketDelegate> delegate = [self delegate];

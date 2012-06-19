@@ -80,6 +80,12 @@
 - (BOOL)setAddress:(NSData *)addressData error:(NSError **)outError;
 - (BOOL)connectToAddress:(NSData *)addressData timeout:(NSTimeInterval)timeout error:(NSError **)outError;
 
+- (void)invalidate;
+- (BOOL)isValid;
+- (NSData *)address;
+- (NSData *)peerAddress;
+- (NSSocketNativeHandle)nativeHandle;
+
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
 @end
