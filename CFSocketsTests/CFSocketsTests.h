@@ -24,6 +24,9 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface CFSocketsTests : SenTestCase
+#import <CFSockets/CFSocket.h>
+#import <CFSockets/CFStreamPair.h>
+
+@interface CFSocketsTests : SenTestCase<CFSocketDelegate, CFStreamPairDelegate>
 
 @end
