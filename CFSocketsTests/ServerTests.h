@@ -1,4 +1,4 @@
-// CFSocketsTests CFSocketsTests.h
+// CFSockets ServerTests.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -24,6 +24,9 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface CFSocketsTests : SenTestCase
+#import <CFSockets/CFSocket.h>
+#import <CFSockets/CFStreamPair.h>
+
+@interface ServerTests : SenTestCase<CFSocketDelegate, CFStreamPairDelegate>
 
 @end

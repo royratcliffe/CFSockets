@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7892479E15943DAA001283A2 /* ServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7892479D15943DAA001283A2 /* ServerTests.m */; };
+		7892479F15943DAA001283A2 /* ServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7892479D15943DAA001283A2 /* ServerTests.m */; };
 		78D32108159056650039E12B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D32107159056650039E12B /* Cocoa.framework */; };
 		78D32112159056650039E12B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78D32110159056650039E12B /* InfoPlist.strings */; };
 		78D3211E159056650039E12B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3211D159056650039E12B /* SenTestingKit.framework */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7892479C15943DAA001283A2 /* ServerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerTests.h; sourceTree = "<group>"; };
+		7892479D15943DAA001283A2 /* ServerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerTests.m; sourceTree = "<group>"; };
 		78D32104159056650039E12B /* CFSockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFSockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D32107159056650039E12B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		78D3210A159056650039E12B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -204,6 +208,8 @@
 			children = (
 				78D32129159056650039E12B /* CFSocketsTests.h */,
 				78D3212A159056650039E12B /* CFSocketsTests.m */,
+				7892479C15943DAA001283A2 /* ServerTests.h */,
+				7892479D15943DAA001283A2 /* ServerTests.m */,
 				78D32124159056650039E12B /* Supporting Files */,
 			);
 			path = CFSocketsTests;
@@ -441,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D3212B159056650039E12B /* CFSocketsTests.m in Sources */,
+				7892479E15943DAA001283A2 /* ServerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78D3216015905E840039E12B /* CFSocketsTests.m in Sources */,
+				7892479F15943DAA001283A2 /* ServerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
