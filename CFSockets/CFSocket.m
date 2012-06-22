@@ -146,6 +146,13 @@
 	return 0 == setsockopt([self nativeHandle], SOL_SOCKET, SO_REUSEADDR, (void *)&option, sizeof(option));
 }
 
+- (int)addressFamily
+{
+	uint8_t sockaddr[SOCK_MAXADDRLEN];
+	socklen_t len = sizeof(sockaddr);
+	return 0 == getsockname([self nativeHandle], (struct sockaddr *)sockaddr, &len) && len >= offsetof(struct sockaddr, sa_data) ? ((struct sockaddr *)sockaddr)->sa_family : AF_MAX;
+}
+
 - (void)addToCurrentRunLoopForCommonModes
 {
 	// NSRunLoop is not toll-free bridged to CFRunLoop, even though their names

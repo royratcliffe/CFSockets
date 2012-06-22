@@ -114,11 +114,35 @@
 - (NSData *)peerAddress;
 - (NSSocketNativeHandle)nativeHandle;
 - (BOOL)setReuseAddressOption:(BOOL)flag;
+
+/*!
+ * @brief Answers the socket address family.
+ * @details For Internet-based sockets, answers either @c AF_INET6 or @c
+ * AF_INET. The latter for IP version 4 addresses. Note, protocol and address
+ * family are one and the same for Internet addresses. Protocol families are
+ * defined in terms of their address family; the @c PF_ equals its corresponding
+ * @c AF_ manifest constant.
+ *
+ * You can use this for polymorphic behaviour. If behaviour depends on a
+ * particular kind of socket, you can ask this method for the underlying address
+ * family and respond accordingly. This method differs from -address which binds
+ * the address first. The implementation here obtains the address family
+ * non-destructively; socket state remains unchanged.
+ * @result Answers the socket address family, or @c AF_MAX when an error
+ * occurs. On error, standard library @c errno value indicates the problem.
+ */
+- (int)addressFamily;
+
 - (void)addToCurrentRunLoopForCommonModes;
 - (void)removeFromCurrentRunLoopForCommonModes;
 - (void)disableAcceptCallBack;
 - (void)enableAcceptCallBack;
 
+/*!
+ * @details Exists to allow for optional overriding. You do not need to deploy
+ * the delegate protocol if your sub-class handles "accept native handle" events
+ * directly; though delegation usually works best.
+ */
 - (void)acceptNativeHandle:(NSSocketNativeHandle)nativeHandle;
 
 @end

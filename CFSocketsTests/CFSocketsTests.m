@@ -44,6 +44,16 @@
 	}
 }
 
+- (void)testIPv6AddressFamily
+{
+	STAssertEquals([[[CFSocket alloc] initForTCPv6] addressFamily], AF_INET6, nil);
+}
+
+- (void)testIPv4AddressFamily
+{
+	STAssertEquals([[[CFSocket alloc] initForTCPv4] addressFamily], AF_INET, nil);
+}
+
 - (void)testSocketBindingToAnyAddressWithPort54321
 {
 	NSError *__autoreleasing error = nil;
