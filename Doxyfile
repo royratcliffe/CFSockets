@@ -1,3 +1,4 @@
+PROJECT_NAME			= CFSockets
 GENERATE_DOCSET         = YES
 
 DOCSET_FEEDNAME         = "Core Foundation Sockets Documentation Set"
