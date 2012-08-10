@@ -133,6 +133,14 @@
  */
 - (int)addressFamily;
 
+/*!
+ * @brief Answers the port number.
+ * @details The answer depends on the socket's address family: version 4 or
+ * 6. Handles the network-to-host byte ordering. The resulting integer has
+ * correct ordering for the host machine.
+ */
+- (int)port;
+
 - (void)addToCurrentRunLoopForCommonModes;
 - (void)removeFromCurrentRunLoopForCommonModes;
 - (void)disableAcceptCallBack;

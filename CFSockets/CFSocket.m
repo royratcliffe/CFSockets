@@ -153,6 +153,23 @@
 	return 0 == getsockname([self nativeHandle], (struct sockaddr *)sockaddr, &len) && len >= offsetof(struct sockaddr, sa_data) ? ((struct sockaddr *)sockaddr)->sa_family : AF_MAX;
 }
 
+- (int)port
+{
+	int port;
+	switch ([self addressFamily])
+	{
+		case AF_INET:
+			port = ntohs(((struct sockaddr_in *)[[self address] bytes])->sin_port);
+			break;
+		case AF_INET6:
+			port = ntohs(((struct sockaddr_in6 *)[[self address] bytes])->sin6_port);
+			break;
+		default:
+			port = 0;
+	}
+	return port;
+}
+
 - (void)addToCurrentRunLoopForCommonModes
 {
 	// NSRunLoop is not toll-free bridged to CFRunLoop, even though their names
