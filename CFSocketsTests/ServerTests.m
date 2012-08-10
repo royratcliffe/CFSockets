@@ -92,6 +92,9 @@
 			// automatically release it, and the stream pair will automatically
 			// close itself.
 			[[self streamPairs] removeObject:streamPair];
+			break;
+		default:
+			;
 	}
 }
 
