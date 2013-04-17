@@ -1,5 +1,7 @@
 # Core Foundation Sockets
 
+[![Build Status](https://travis-ci.org/royratcliffe/CFSockets.png?branch=master)](https://travis-ci.org/royratcliffe/CFSockets)
+
 The project has four targets: a Cocoa framework with its unit test bundle, an
 iOS static library with its unit test bundle. The framework and the library
 share the same source files. The sources use Automatic Reference Counting (ARC).
