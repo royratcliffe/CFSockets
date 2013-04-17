@@ -1,11 +1,4 @@
 PROJECT_NAME            = CFSockets
-PROJECT_NUMBER          = 1.0
-TAB_SIZE                = 4
-EXTENSION_MAPPING       = h=Objective-C
-INPUT                   = CFSockets CFSocketsTests
-SOURCE_BROWSER          = YES
-HTML_TIMESTAMP          = NO
-GENERATE_LATEX          = NO
 GENERATE_DOCSET         = YES
 
 DOCSET_FEEDNAME         = "Core Foundation Sockets Documentation Set"
