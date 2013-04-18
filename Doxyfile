@@ -1,10 +1,4 @@
-PROJECT_NAME            = CFSockets
-GENERATE_DOCSET         = YES
-
-DOCSET_FEEDNAME         = "Core Foundation Sockets Documentation Set"
-DOCSET_BUNDLE_ID        = uk.co.pioneeringsoftware.CoreFoundationSocketsDocSet
-DOCSET_PUBLISHER_ID     = uk.co.pioneeringsoftware.CoreFoundationSocketsDocSet.documentation
-DOCSET_PUBLISHER_NAME   = Pioneering Software
+PROJECT_NAME            = "Core Foundation Sockets"
 
 EXTRACT_ALL             = YES
 EXTRACT_PRIVATE         = YES
@@ -17,6 +11,7 @@ GENERATE_BUGLIST        = YES
 GENERATE_DEPRECATEDLIST = YES
 
 STRIP_CODE_COMMENTS     = NO
+JAVADOC_AUTOBRIEF       = YES
 
 HAVE_DOT                = YES
 
