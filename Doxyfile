@@ -1,4 +1,4 @@
-PROJECT_NAME			= CFSockets
+PROJECT_NAME            = CFSockets
 GENERATE_DOCSET         = YES
 
 DOCSET_FEEDNAME         = "Core Foundation Sockets Documentation Set"
@@ -21,3 +21,5 @@ STRIP_CODE_COMMENTS     = NO
 HAVE_DOT                = YES
 
 IMAGE_PATH              = Documents
+INPUT                  += README.md
+USE_MDFILE_AS_MAINPAGE  = README.md
