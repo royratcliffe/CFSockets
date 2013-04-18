@@ -10,5 +10,5 @@ Why the plural project name? The project goes by the name 'Core Foundation
 Sockets' rather than 'Core Foundation Socket.' This avoids confusion with
 `CFSocket` which represents just one component of the CFSockets project. The
 project's monolithic header imports as `<CFSockets/CFSockets.h>`. The
-additional 's' for the project prevents a clash with header
+additional _s_ for the project prevents a clash with header
 `<CFSockets/CFSocket.h>` which only imports the `CFSocket` class.
