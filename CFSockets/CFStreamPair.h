@@ -1,6 +1,6 @@
 // CFSockets CFStreamPair.h
 //
-// Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
+// Copyright © 2012, 2013, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the “Software”), to deal
@@ -36,11 +36,12 @@
 
 @end
 
-/*!
- * @brief Adds request-response semantics to a socket by encapsulating it with
+/**
+ * Adds request-response semantics to a socket by encapsulating it with
  * an input-output stream pair.
- * @details For TCP connections, the request input stream corresponds to the
- * request; @em receive the request bytes from the request input, @em send the
+ *
+ * For TCP connections, the request input stream corresponds to the
+ * request; _receive_ the request bytes from the request input, _send_ the
  * response to the response output stream.
  */
 @interface CFStreamPair : NSObject<NSStreamDelegate>
@@ -52,25 +53,36 @@
 - (id)initWithRequestStream:(NSInputStream *)requestStream responseStream:(NSOutputStream *)responseStream;
 - (id)initWithSocketNativeHandle:(NSSocketNativeHandle)socketNativeHandle;
 
-/*!
- * @details This method assumes that you have not already delegated, scheduled
+/**
+ * Opens the request and response streams, scheduling them for service within
+ * the current run loop. You cannot reopen the streams.
+ *
+ * This method assumes that you have not already delegated, scheduled
  * or opened the underlying request-response stream pair.
  */
 - (void)open;
+
+/**
+ * Reverses the opening. Closes the request and response streams, removes them
+ * from the current run loop. This assumes that you send `-close` from the same
+ * thread as you sent the original `-open`.
+ */
 - (void)close;
 
-/*!
- * @brief Destructively receives bytes from the request buffer.
+/**
+ * Destructively receives bytes from the request buffer.
  */
 - (NSData *)receiveAvailableBytes;
 
-/*!
- * @brief Special convenience method for receiving lines of text from the
+/**
+ * Special convenience method for receiving lines of text from the
  * request stream based on a given string encoding.
- * @details The result includes any line termination characters. There could be
+ *
+ * The result includes any line termination characters. There could be
  * more than one termination character at the end of the line since some line
  * termination sequences span multiple characters.
- * @result Answers @c nil if the request buffer does not yet contain a complete
+ *
+ * @result Answers `nil` if the request buffer does not yet contain a complete
  * line. Try again later.
  */
 - (NSString *)receiveLineUsingEncoding:(NSStringEncoding)encoding;

@@ -1,6 +1,6 @@
 /* CFSockets CFSocketAddressDataHelpers.m
  *
- * Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
+ * Copyright © 2012, 2013, Roy Ratcliffe, Pioneering Software, United Kingdom
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the “Software”), to deal
@@ -28,12 +28,12 @@ NSData *CFSocketAddressDataFromIPv6AddressWithPort(const struct in6_addr *addr, 
 {
 	struct sockaddr_in6 sockaddr;
 	memset(&sockaddr, 0, sizeof(sockaddr));
-	
+
 	sockaddr.sin6_len = sizeof(sockaddr);
 	sockaddr.sin6_family = AF_INET6;
 	sockaddr.sin6_port = htons(port);
 	memcpy(&sockaddr.sin6_addr, addr, sizeof(sockaddr.sin6_addr));
-	
+
 	return [NSData dataWithBytes:&sockaddr length:sizeof(sockaddr)];
 }
 
@@ -51,12 +51,12 @@ NSData *CFSocketAddressDataFromIPv4AddressWithPort(in_addr_t addr, in_port_t por
 {
 	struct sockaddr_in sockaddr;
 	memset(&sockaddr, 0, sizeof(sockaddr));
-	
+
 	sockaddr.sin_len = sizeof(sockaddr);
 	sockaddr.sin_family = AF_INET;
 	sockaddr.sin_port = htons(port);
 	sockaddr.sin_addr.s_addr = htonl(addr);
-	
+
 	return [NSData dataWithBytes:&sockaddr length:sizeof(sockaddr)];
 }
 

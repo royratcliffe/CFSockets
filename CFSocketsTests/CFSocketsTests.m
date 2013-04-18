@@ -1,6 +1,6 @@
 // CFSocketsTests CFSocketsTests.m
 //
-// Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
+// Copyright © 2012, 2013, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the “Software”), to deal
@@ -57,14 +57,14 @@
 - (void)testSocketBindingToAnyAddressWithPort54321
 {
 	NSError *__autoreleasing error = nil;
-	
+
 	CFSocket *socket = [[CFSocket alloc] initForTCPv6];
 	STAssertNotNil(socket, nil);
-	
+
 	// Clean up afterwards. Let the operating system quickly reclaim the port
 	// after shutting down the socket.
 	STAssertTrue([socket setReuseAddressOption:YES], nil);
-	
+
 	// Place a breakpoint after the following assert; with the unit test bundle
 	// paused by the debugger, switch to Terminal and run "lsof -i" then you
 	// will see an "otest" process with "TCP *:54321 (LISTEN)" meaning listening
@@ -76,12 +76,12 @@
 - (void)testSocketBindingToLoopBackIPv4AddressWithPort54321
 {
 	NSError *__autoreleasing error = nil;
-	
+
 	CFSocket *socket = [[CFSocket alloc] initForTCPv4];
 	STAssertNotNil(socket, nil);
-	
+
 	STAssertTrue([socket setReuseAddressOption:YES], nil);
-	
+
 	// TCP localhost:54321 (LISTEN)
 	STAssertTrue([socket setAddress:CFSocketAddressDataFromLoopBackIPv4WithPort(54321) error:&error], nil);
 	STAssertNil(error, nil);
