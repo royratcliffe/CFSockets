@@ -27,7 +27,7 @@
 extern const unsigned char kCFSocketsVersionString[];
 extern const double kCFSocketsVersionNumber;
 
-/*!
+/**
  * Answers the current Apple-generic versioning-formatted version string. The
  * version string has been trimmed. It has no leading or trailing whitespace or
  * newlines. Note that the raw C-based version string contrastingly has a single
