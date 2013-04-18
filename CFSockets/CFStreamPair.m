@@ -100,7 +100,7 @@
 		{
 			if (readStream) CFRelease(readStream);
 			if (writeStream) CFRelease(writeStream);
-			
+
 			// Something went wrong. Answer nil. Bear in mind however that this
 			// does not mean that the de-allocation method will not run: it
 			// will run.
@@ -115,7 +115,7 @@
 	for (NSStream *stream in [NSArray arrayWithObjects:[self requestStream], [self responseStream], nil])
 	{
 		[stream setDelegate:self];
-		
+
 		[stream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 		[stream open];
 	}
@@ -170,7 +170,7 @@
 - (void)sendBytes:(NSData *)responseBytes
 {
 	[[self responseBuffer] appendData:responseBytes];
-	
+
 	// Trigger a "has space available" event if the response stream reports
 	// available space at this point.
 	if ([[self responseStream] hasSpaceAvailable])
@@ -249,14 +249,14 @@
 			[self hasBytesAvailable];
 			if (bytesAvailable < 0)
 			{
-				
+
 			}
 			break;
 		}
 		default:
 			;
 	}
-	
+
 	id delegate = [self delegate];
 	if (delegate && [delegate respondsToSelector:@selector(streamPair:handleRequestEvent:)])
 	{
@@ -276,7 +276,7 @@
 		default:
 			;
 	}
-	
+
 	id delegate = [self delegate];
 	if (delegate && [delegate respondsToSelector:@selector(streamPair:handleResponseEvent:)])
 	{

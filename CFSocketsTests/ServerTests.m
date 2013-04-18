@@ -44,7 +44,7 @@
 - (void)testServerSocket
 {
 	NSError *__autoreleasing error = nil;
-	
+
 	CFSocket *serverSocket = [[CFSocket alloc] initForTCPv6];
 	STAssertNotNil(serverSocket, nil);
 	STAssertTrue([serverSocket setReuseAddressOption:YES], nil);
@@ -52,7 +52,7 @@
 	STAssertNil(error, nil);
 	STAssertEquals([serverSocket addressFamily], AF_INET6, nil);
 	STAssertEquals([serverSocket port], 54321, nil);
-	
+
 	// Run the server socket in a run-loop for 10 seconds. Make a connection to
 	// the server using "telnet localhost 54321" at the command line. Enter a
 	// line and you will see your message replied with a cryptic prefix. Beware
