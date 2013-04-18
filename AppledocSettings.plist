@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>--output</key>
-	<string>CFSocketsPages</string>
+	<string>CFSocketsDocs</string>
 	<key>--index-desc</key>
 	<string>README.md</string>
 	<key>--project-name</key>
