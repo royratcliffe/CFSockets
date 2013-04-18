@@ -21,3 +21,5 @@ STRIP_CODE_COMMENTS     = NO
 HAVE_DOT                = YES
 
 IMAGE_PATH              = Documents
+INPUT                  += README.md
+USE_MDFILE_AS_MAINPAGE  = README.md
