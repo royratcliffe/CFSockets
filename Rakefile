@@ -28,5 +28,6 @@ end
 
 desc 'Compiles DocSet documentation using AppleDoc'
 task :appledoc do
-  %x(appledoc .)
+  mvers = %x(agvtool mvers -terse1).chomp
+  %x(appledoc --project-version #{mvers} .)
 end
