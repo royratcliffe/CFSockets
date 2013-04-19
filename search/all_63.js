@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['cfsocket',['CFSocket',['../interface_c_f_socket.html',1,'']]],
+  ['cfsocket_2eh',['CFSocket.h',['../_c_f_socket_8h.html',1,'']]],
+  ['cfsocket_2em',['CFSocket.m',['../_c_f_socket_8m.html',1,'']]],
+  ['cfsocketaddressdatafromanyipv4withport',['CFSocketAddressDataFromAnyIPv4WithPort',['../_c_f_socket_address_data_helpers_8h.html#ab82c7bfd1b3e85aa8fa01c07dae262c3',1,'CFSocketAddressDataFromAnyIPv4WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#ab82c7bfd1b3e85aa8fa01c07dae262c3',1,'CFSocketAddressDataFromAnyIPv4WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatafromanyipv6withport',['CFSocketAddressDataFromAnyIPv6WithPort',['../_c_f_socket_address_data_helpers_8h.html#a2e901fc535891a6fad652f75f0dcb50b',1,'CFSocketAddressDataFromAnyIPv6WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#a2e901fc535891a6fad652f75f0dcb50b',1,'CFSocketAddressDataFromAnyIPv6WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatafromipv4addresswithport',['CFSocketAddressDataFromIPv4AddressWithPort',['../_c_f_socket_address_data_helpers_8h.html#a5bd5d0e44c469e02ffd8b48a3548ba80',1,'CFSocketAddressDataFromIPv4AddressWithPort(in_addr_t addr, in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#a5bd5d0e44c469e02ffd8b48a3548ba80',1,'CFSocketAddressDataFromIPv4AddressWithPort(in_addr_t addr, in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatafromipv6addresswithport',['CFSocketAddressDataFromIPv6AddressWithPort',['../_c_f_socket_address_data_helpers_8h.html#a4537707e6cf3c459cc55271a5ba99786',1,'CFSocketAddressDataFromIPv6AddressWithPort(const struct in6_addr *addr, in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#a4537707e6cf3c459cc55271a5ba99786',1,'CFSocketAddressDataFromIPv6AddressWithPort(const struct in6_addr *addr, in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatafromloopbackipv4withport',['CFSocketAddressDataFromLoopBackIPv4WithPort',['../_c_f_socket_address_data_helpers_8h.html#acd563f58cd746c6d55ea77173b50066f',1,'CFSocketAddressDataFromLoopBackIPv4WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#acd563f58cd746c6d55ea77173b50066f',1,'CFSocketAddressDataFromLoopBackIPv4WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatafromloopbackipv6withport',['CFSocketAddressDataFromLoopBackIPv6WithPort',['../_c_f_socket_address_data_helpers_8h.html#ab3fe8702c50e4537585243c5a456ccf9',1,'CFSocketAddressDataFromLoopBackIPv6WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m'],['../_c_f_socket_address_data_helpers_8m.html#ab3fe8702c50e4537585243c5a456ccf9',1,'CFSocketAddressDataFromLoopBackIPv6WithPort(in_port_t port):&#160;CFSocketAddressDataHelpers.m']]],
+  ['cfsocketaddressdatahelpers_2eh',['CFSocketAddressDataHelpers.h',['../_c_f_socket_address_data_helpers_8h.html',1,'']]],
+  ['cfsocketaddressdatahelpers_2em',['CFSocketAddressDataHelpers.m',['../_c_f_socket_address_data_helpers_8m.html',1,'']]],
+  ['cfsocketdelegate_2dp',['CFSocketDelegate-p',['../protocol_c_f_socket_delegate-p.html',1,'']]],
+  ['cfsocketerrordomain',['CFSocketErrorDomain',['../_c_f_socket_8h.html#afcc086e4d6b29a8d60070d96a90655c0',1,'CFSocketErrorDomain():&#160;CFSocket.m'],['../_c_f_socket_8m.html#afcc086e4d6b29a8d60070d96a90655c0',1,'CFSocketErrorDomain():&#160;CFSocket.m']]],
+  ['cfsockets_2eh',['CFSockets.h',['../_c_f_sockets_8h.html',1,'']]],
+  ['cfsocketstests',['CFSocketsTests',['../interface_c_f_sockets_tests.html',1,'']]],
+  ['cfsocketstests_2eh',['CFSocketsTests.h',['../_c_f_sockets_tests_8h.html',1,'']]],
+  ['cfsocketstests_2em',['CFSocketsTests.m',['../_c_f_sockets_tests_8m.html',1,'']]],
+  ['cfsocketsversionstring',['CFSocketsVersionString',['../_versioning_8h.html#aac4ca24d0fcd8e2bd3a4769018828382',1,'CFSocketsVersionString(void):&#160;Versioning.m'],['../_versioning_8m.html#a352d94535e6bddadec3615a49ed4e75c',1,'CFSocketsVersionString():&#160;Versioning.m']]],
+  ['cfstreampair',['CFStreamPair',['../interface_c_f_stream_pair.html',1,'']]],
+  ['cfstreampair_2eh',['CFStreamPair.h',['../_c_f_stream_pair_8h.html',1,'']]],
+  ['cfstreampair_2em',['CFStreamPair.m',['../_c_f_stream_pair_8m.html',1,'']]],
+  ['cfstreampairdelegate_2dp',['CFStreamPairDelegate-p',['../protocol_c_f_stream_pair_delegate-p.html',1,'']]],
+  ['close',['close',['../interface_c_f_stream_pair.html#a07952215c7b98ac7a9adcde887c3704a',1,'CFStreamPair']]],
+  ['connecttoaddress_3atimeout_3aerror_3a',['connectToAddress:timeout:error:',['../interface_c_f_socket.html#acaff08ea7d9530f37d54e0d446035b33',1,'CFSocket']]]
+];

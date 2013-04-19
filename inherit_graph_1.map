@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$interface_c_f_socket.html" title="Wraps Core Foundation&#39;s sockets in Objective&#45;C clothing." alt="" coords="219,5,299,33"/>
+<area shape="rect" id="node3" href="$interface_c_f_stream_pair.html" title="Adds request&#45;response semantics to a socket by encapsulating it with an input&#45;output stream pair..." alt="" coords="206,57,312,85"/>
+</map>
