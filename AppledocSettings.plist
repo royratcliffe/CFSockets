@@ -7,9 +7,7 @@
 	<key>--index-desc</key>
 	<string>README.md</string>
 	<key>--project-name</key>
-	<string>Core Foundation Sockets</string>
-	<key>--project-version</key>
-	<string>0.2</string>
+	<string>CFSockets</string>
 	<key>--project-company</key>
 	<string>Pioneering Software, United Kingdom</string>
 	<key>--company-id</key>
